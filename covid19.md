@@ -153,3 +153,13 @@ plt.title('Evolution of death vs its Prediction')
 plt.show()
 ```
 ![Evolution of death vs its Prediction](images/pred_death2.png)
+
+## And even do some previsions
+```Python
+plt.plot(df_day.counter.to_numpy(), df_day.dc.to_numpy())
+plt.plot(df_day.counter.to_numpy(), df_day.counter.map(lambda e:p3(e)))
+d=np.arange(df_day.counter[-1] + 1, 300, 1)
+plt.plot(d, p3(d))
+plt.show()
+```
+![Prediction of the evolution of death](images/pred_evo.png)
